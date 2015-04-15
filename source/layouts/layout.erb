@@ -7,13 +7,22 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || 'Top Albums' %></title>
     
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
   </head>
   
   <body class="<%= page_classes %>">
+    <nav class="m-sticky-nav">
+      <ul class="buttons links">
+        <li><a href="/">Top Albums</a></li>
+      </ul>
+      <ul class="buttons social">
+        <li><a class="icon-twitter" href="#"></a></li>
+        <li><a class="icon-facebook" href="#"></a></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
