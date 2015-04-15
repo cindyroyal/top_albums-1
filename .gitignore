@@ -6,7 +6,6 @@
 
 # Ignore bundler config
 /.bundle
-/google_drive_cache
 
 # Ignore the build directory
 /build

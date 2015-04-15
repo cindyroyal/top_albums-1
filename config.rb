@@ -32,10 +32,6 @@ data['twelvelabs']['topalbums']['album'].each do |a|
   proxy "/twelvelabs/#{a['@attr']['rank']}.html", 'detail.html', locals: { username: 'twelvelabs', album: a }, ignore: true
 end
 
-activate :google_drive, load_sheets: {
-    top_album_users: '1syKiIrHwLuMlgWntgRpXRWmSxm3L3C76bb_-Ob-Gbzk'
-}
-
 
 ###
 # Helpers
