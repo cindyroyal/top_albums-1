@@ -2,8 +2,9 @@
   <div class="row">
     <div class="col-md-3">
       <ul class="usernames">
-        <li><a href="/twelvelabs.html">twelvelabs</a></li>
-        <li><a href="/clockwerks.html">clockwerks</a></li>
+        <% data['top_album_users']['Sheet1'].each do |row| %>
+          <li><a href="/<%= row['UserName'] %>.html"><%= row['DisplayName'] %></a></li>
+        <% end %>
       </ul>
     </div>
     <div class="col-md-9">
