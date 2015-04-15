@@ -25,8 +25,13 @@
 # end
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+data['clockwerks']['topalbums']['album'].each do |a|
+  proxy "/clockwerks/#{a['@attr']['rank']}.html", 'detail.html', locals: { username: 'clockwerks', album: a }, ignore: true
+end
+data['twelvelabs']['topalbums']['album'].each do |a|
+  proxy "/twelvelabs/#{a['@attr']['rank']}.html", 'detail.html', locals: { username: 'twelvelabs', album: a }, ignore: true
+end
+
 
 ###
 # Helpers
